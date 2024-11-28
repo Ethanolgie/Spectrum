@@ -3048,7 +3048,7 @@
   "item.spectrum.creative_ink_assortment": "创造模式混合墨水",
   "item.spectrum.creative_ink_assortment.tooltip": "§7源源不断的墨水瓶",
 
-  "block.spectrum.color_picker": "颜色选取器",
+  "block.spectrum.color_picker": "拾色器",
   "block.spectrum.color_picker.tooltip": "将§2颜§3料§7转变为墨水",
   "block.spectrum.crystal_apothecary": "水晶收集器",
   "block.spectrum.crystal_apothecary.owner": "%s 的水晶收集器",
@@ -3609,7 +3609,7 @@
   "book.spectrum.guidebook.milky_resin.page1.text": "*~ 加一点糖和一点爱,然后 -[凝结成奶油](entry://cuisine/titration_barrel#4)!~*",
 
   "book.spectrum.guidebook.laurels_of_serenity.page0.text": "没有怪物骚扰我的感觉真是太爽了!,但是每隔一段时间嚼一次叶子导致我的舌头有点发麻,既然如此,那我能不能换一种形式,直接戴在头上呢?...然后再往里面灌满紫色墨水.\\\n\\\n等等 -既然这是用花做的,那它算不算是花环?*",
-  "book.spectrum.guidebook.laurels_of_serenity.page1.text": "在[颜色选取器](entry://ink/color_picker)[#]()中注入[紫色墨水](entry://ink/ink)以减少怪物探测范围（类似于隐身）.\\\n\\\n*~ 催眠抗性是附带的 ~*",
+  "book.spectrum.guidebook.laurels_of_serenity.page1.text": "在[拾色器](entry://ink/color_picker)[#]()中注入[紫色墨水](entry://ink/ink)以减少怪物探测范围（类似于隐身）.\\\n\\\n*~ 催眠抗性是附带的 ~*",
 
   "book.spectrum.guidebook.abyssal_vines.page0.text": "蜿蜒的根茎和发光的果实构成了一幅极为熟悉的景象.虽然颜色较暗且枝叶较多,但很容易看出这些悬挂的藤蔓与发光浆果有关.\\\n鉴于它们苍白和晶莹的特性,我猜想,经历了几个世纪的黑暗和以[液态水晶](entry://general/liquid_crystal)为食,使它们进化成了在渊深的凉爽暮光中如鱼得水的植物.",
   "book.spectrum.guidebook.abyssal_vines.page1.text": "*触摸毛茸茸的东西会头晕*",
@@ -3661,7 +3661,7 @@
   "book.spectrum.guidebook.azure_dike_equipment.page1.title": "蔚蓝护盾",
   "book.spectrum.guidebook.azure_dike_equipment.page2.text": "-提供[#](495b24)4[#]()点[#](2c2e8e)蔚蓝护盾值[#]()上限\n-略微加快[#](2c2e8e)蔚蓝护盾[#]()充能速度",
   "book.spectrum.guidebook.azure_dike_equipment.page3.text": "-提供[#](495b24)6[#]()点[#](2c2e8e)蔚蓝护盾值[#]()上限\n-增加受击后[#](2c2e8e)蔚蓝护盾[#]()的恢复速度,以此加速充能.",
-  "book.spectrum.guidebook.azure_dike_equipment.page4.text": "在[颜色选取器](entry://ink/color_picker)中为护符注入[蓝色墨水](entry://ink/ink)即可提升[#](2c2e8e)蔚蓝护盾值[#]()上限\\\n一开始并不会特别消耗能量,但注入墨水越多,消耗的能量也会越多,并呈指数增长.",
+  "book.spectrum.guidebook.azure_dike_equipment.page4.text": "在[拾色器](entry://ink/color_picker)中为护符注入[蓝色墨水](entry://ink/ink)即可提升[#](2c2e8e)蔚蓝护盾值[#]()上限\\\n一开始并不会特别消耗能量,但注入墨水越多,消耗的能量也会越多,并呈指数增长.",
 
   "book.spectrum.guidebook.azurite.name": "石青",
   "book.spectrum.guidebook.azurite.page0.text": "外观与[#](bb00bb)青金石[#]()神似的湛蓝矿石.其天然形态存在杂质,进行精炼之后方可使用.\\\n\\\n这种矿石存在于地下深处,并且似乎能放大颜料的能量.",
@@ -4323,7 +4323,7 @@
   "book.spectrum.guidebook.heartbound_chest.page2.text": "类似陷阱箱,心灵结印箱也会发出[#](449900)红石信号[#]().\\\n如果我作为主人打开会输出强度为15的信号,但由别人打开只会输出强度为7的信号.",
 
   "book.spectrum.guidebook.heartsingers_reward.page0.text": "如此纤巧的戒指,功能却实在不俗:在一点点（或很多）[#](d6658f)粉红色墨水[#]()的帮助下,由内而外地增强了我的力量,并赋予生命上限.",
-  "book.spectrum.guidebook.heartsingers_reward.page1.text": "在[颜色选取器](entry://ink/color_picker)中注入[粉红色墨水](entry://ink/ink)可以增加提供的额外生命值.",
+  "book.spectrum.guidebook.heartsingers_reward.page1.text": "在[拾色器](entry://ink/color_picker)中注入[粉红色墨水](entry://ink/ink)可以增加提供的额外生命值.",
 
   "book.spectrum.guidebook.hints.a_gemstone": "新宝石",
   "book.spectrum.guidebook.hints.a_new_ore": "新矿石",
@@ -4551,15 +4551,15 @@
   "book.spectrum.guidebook.ink.name": "墨水",
   "book.spectrum.guidebook.ink.page0.text": "我对[颜料](entry://general/pigment)的本质早已谙熟于心,既然如此,为什么随身携带拿着四处跑呢?多么古早味.为此我找到了一种将[颜料](entry://general/pigment)转化为更高形式能量的办法!\\\n\\\n我称之为[#](eded00)墨[#](aa32a0)水[#]().",
   "book.spectrum.guidebook.ink.page1.title": "制作与存储",
-  "book.spectrum.guidebook.ink.page1.text": "[颜料](entry://general/pigment)可以使用[颜色选取器](entry://ink/color_picker)来转换为墨水,然后提取到像[墨水瓶](entry://ink/ink_flask)这样的容器中.\\\n\\\n唯一的缺点是:失去其物理形态后,就再不可能变回颜料了.",
+  "book.spectrum.guidebook.ink.page1.text": "[颜料](entry://general/pigment)可以使用[拾色器](entry://ink/color_picker)来转换为墨水,然后提取到像[墨水瓶](entry://ink/ink_flask)这样的容器中.\\\n\\\n唯一的缺点是:失去其物理形态后,就再不可能变回颜料了.",
   "book.spectrum.guidebook.ink.page2.title": "传输",
   "book.spectrum.guidebook.ink.page2.text": "墨水的流动方式有点类似于气体.它会从浓度高的地方流向浓度低的地方.",
-  "book.spectrum.guidebook.ink.page3.text": "\\\n当两个储存墨水的物体连接在一起时——比如将[墨水瓶](entry://ink/ink_flask)放入[颜色选取器](entry://ink/color_picker)中——两者之间的墨水会慢慢均衡.\\\n差异越大,瓶子填充得越快.",
+  "book.spectrum.guidebook.ink.page3.text": "\\\n当两个储存墨水的物体连接在一起时——比如将[墨水瓶](entry://ink/ink_flask)放入[拾色器](entry://ink/color_picker)中——两者之间的墨水会慢慢均衡.\\\n差异越大,瓶子填充得越快.",
 
   "book.spectrum.guidebook.ink_assortment.page0.text": "这些小瓶可以少量存储多种[墨水](entry://ink/ink).",
 
   "book.spectrum.guidebook.ink_flask.page0.text": "墨水瓶可容纳大量单一颜色的[墨水](entry://ink/ink).",
-  "book.spectrum.guidebook.ink_flask.page1.text": "可以在[颜色选取器](entry://ink/color_picker)中填充.",
+  "book.spectrum.guidebook.ink_flask.page1.text": "可以在[拾色器](entry://ink/color_picker)中填充.",
 
   "book.spectrum.guidebook.pigment_palette.page0.text": "身上背着这么多[墨水](entry://ink/ink)来维持我的魔法工具真的是沉重的负担,还占用了我大量背包空间.\\\n是时候让调色板登场了!\\\n\\\n*主题上很贴切,不是吗?现在我感觉自己像个真正的搞颜色的艺术家了.*",
   "book.spectrum.guidebook.pigment_palette.page1.text": "能够储存大量的[墨水](entry://ink/ink),非常适合驱动我的各色魔法装备.不过,无法为机器提供动力.",
@@ -5219,7 +5219,7 @@
   "book.spectrum.guidebook.ring_of_denser_steps.page1.text": "*可能是我迄今为止最愚钝的想法*",
 
   "book.spectrum.guidebook.ring_of_pursuit.page0.text": "采矿是我的爱好.\\\n直到现在我才想到,不仅要升级我的工具,还要提升我的采矿技能.这枚戒指甚至会随着我的能力而成长,简直是个奇迹.",
-  "book.spectrum.guidebook.ring_of_pursuit.page1.text": "可以在[颜色选取器](entry://ink/color_picker)中注入[品红色墨水](entry://ink/ink)以增加采矿速度.",
+  "book.spectrum.guidebook.ring_of_pursuit.page1.text": "可以在[拾色器](entry://ink/color_picker)中注入[品红色墨水](entry://ink/ink)以增加采矿速度.",
 
   "book.spectrum.guidebook.rock_candy.page0.text": "一根上面有[#](bb00bb)糖[#]()的棍子.\\\n\\\n……等等,我发现还没完!\\\n如果我将这根棍子的底部浸入[液态水晶](entry://general/liquid_crystal)中,并在液体中溶解更多的[](item://minecraft:sugar),棍子就会慢慢变成甜脆的糖果棒.",
   "book.spectrum.guidebook.rock_candy.page1.text": "也许除了糖以外我还可以加点别的东西?液态*水晶*之类的……",
@@ -5773,7 +5773,7 @@
   "advancements.spectrum.create_jade_vine.title": "旧忆交织",
   "advancements.spectrum.create_jade_vine.description": "弄清楚玉藤是如何形成的",
   "advancements.spectrum.fill_ink_container.title": "一种新的能量形式",
-  "advancements.spectrum.fill_ink_container.description": "使用颜色选取器填充墨水瓶.墨水的行为类似于气体,在存储之间均匀分布",
+  "advancements.spectrum.fill_ink_container.description": "使用拾色器填充墨水瓶.墨水的行为类似于气体,在存储之间均匀分布",
   "advancements.spectrum.get_killed_while_out_of_deeper_down_bounds.title": "胶带逃生",
   "advancements.spectrum.get_killed_while_out_of_deeper_down_bounds.description": "通过不寻常的方式找到回家的路",
   "advancements.spectrum.survive_fatal_slumber.title": "黑暗中的一束光",
@@ -6014,7 +6014,7 @@
   "advancements.spectrum.wear_complete_set_of_bedrock_armor.title": "黑暗骑士崛起",
   "advancements.spectrum.wear_complete_set_of_bedrock_armor.description": "华自坚石发,夭而不靡,玄而不凋.穿上所有基岩盔甲",
   "advancements.spectrum.place_color_picker.title": "挑三拣四",
-  "advancements.spectrum.place_color_picker.description": "合成并使用颜色选取器",
+  "advancements.spectrum.place_color_picker.description": "合成并使用拾色器",
   "advancements.spectrum.collect_bismuth.title": "五十度彩",
   "advancements.spectrum.collect_bismuth.description": "获得铋晶",
   "advancements.spectrum.collect_bismuth_crystal.title": "原始之梦",
