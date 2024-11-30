@@ -87,4 +87,13 @@ public abstract class EntityMixin {
 		return original;
 	}
 	
+	@ModifyReturnValue(method = "isOnFire", at = @At("RETURN"))
+	public boolean spectrum$considerPrimfireAsFire(boolean original) {
+		var entity = (Entity) (Object) this;
+		
+		if (entity instanceof LivingEntity living && OnPrimordialFireComponent.isOnPrimordialFire(living))
+			return true;
+
+		return original;
+	}
 }

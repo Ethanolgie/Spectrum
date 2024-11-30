@@ -11,7 +11,6 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.effect.*;
 import net.minecraft.network.packet.s2c.play.*;
 import net.minecraft.server.world.*;
-import org.jetbrains.annotations.*;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -48,18 +47,15 @@ public abstract class LivingEntityPreventStatusClearMixin {
 			if (affectedByImmunity(instance, effect.getAmplifier()))
 				return true;
 			
-			// new duration = duration - 1min OR duration * 0.4, whichever is the smaller reduction
-			int duration = effect.getDuration();
-			((StatusEffectInstanceAccessor) effect).setDuration(Math.max(duration - 1200, (int)(duration * 0.4)));
-			if (!instance.getWorld().isClient()) {
-				((ServerWorld) instance.getWorld()).getChunkManager().sendToNearbyPlayers(instance, new EntityStatusEffectS2CPacket(instance.getId(), effect));
-			}
-
+			Incurable.cutDuration(instance, effect);
+			
 			blockRemoval.set(true);
 			return false;
 		}
 		return true;
 	}
+	
+	
 	
 	@WrapWithCondition(method = "clearStatusEffects", at = @At(value = "INVOKE", target = "Ljava/util/Iterator;remove()V"))
 	private boolean spectrum$preventStatusClear2(Iterator instance, @Share("blockRemoval") LocalBooleanRef blockRemoval) {

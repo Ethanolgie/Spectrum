@@ -43,8 +43,8 @@ public class SpiritInstillerBlockEntity extends InWorldInteractionBlockEntity im
 		add(new Vec3i(2, 0, 0));
 		add(new Vec3i(-2, 0, 0));
 	}};
-
-	private static final Identifier JADE_VINE_CROSSBREEDING = SpectrumCommon.locate("spirit_instiller/secret/germinated_jade_vine_crossbreeding");
+	
+	private static final Identifier JADE_VINE_CROSSBREEDING = SpectrumCommon.locate("spirit_instiller/secret/germinated_jade_vine_crossbreeding"); // TODO: Move to advancements class
 	
 	private final Inventory autoCraftingInventory; // 0: instiller stack; 1-2: item bowl stacks
 	private boolean inventoryChanged;
@@ -97,6 +97,8 @@ public class SpiritInstillerBlockEntity extends InWorldInteractionBlockEntity im
 		if (spiritInstillerBlockEntity.craftingTime % 60 == 0) {
 			if (!checkRecipeRequirements(world, blockPos, spiritInstillerBlockEntity)) {
 				spiritInstillerBlockEntity.craftingTime = 0;
+				spiritInstillerBlockEntity.markDirty();
+				SpectrumS2CPacketSender.sendCancelBlockBoundSoundInstance((ServerWorld) world, spiritInstillerBlockEntity.pos);
 				return;
 			}
 		}

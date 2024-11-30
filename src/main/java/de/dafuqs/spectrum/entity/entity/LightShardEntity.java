@@ -29,10 +29,6 @@ public class LightShardEntity extends LightShardBaseEntity {
 		spriteId = world.getRandom().nextInt(4);
 	}
 	
-	public static void summonBarrage(World world, @NotNull LivingEntity user, @Nullable LivingEntity target, Predicate<LivingEntity> targetPredicate) {
-		summonBarrage(world, user, target, targetPredicate, user.getEyePos(), DEFAULT_COUNT_PROVIDER);
-	}
-	
 	public static void summonBarrage(World world, @Nullable LivingEntity user, @Nullable LivingEntity target, Predicate<LivingEntity> targetPredicate, Vec3d position, IntProvider count) {
 		summonBarrage(world, user, position, target, targetPredicate, count, () -> new LightShardEntity(world, user, 0.5F, 200));
 	}

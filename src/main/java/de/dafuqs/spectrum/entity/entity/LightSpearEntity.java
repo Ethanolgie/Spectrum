@@ -35,10 +35,6 @@ public class LightSpearEntity extends LightShardBaseEntity {
 		return SpectrumCommon.locate("textures/entity/projectile/light_spear.png");
 	}
 	
-	public static void summonBarrage(World world, @NotNull LivingEntity user, @Nullable LivingEntity target, Predicate<LivingEntity> targetPredicate) {
-		summonBarrage(world, user, target, targetPredicate, user.getEyePos(), DEFAULT_COUNT_PROVIDER);
-	}
-	
 	public static void summonBarrage(World world, @Nullable LivingEntity user, @Nullable LivingEntity target, Predicate<LivingEntity> targetPredicate, Vec3d position, IntProvider count) {
 		summonBarrageInternal(world, user, () -> new LightSpearEntity(world, user, 12.0F, 200), target, targetPredicate, position, count);
 	}

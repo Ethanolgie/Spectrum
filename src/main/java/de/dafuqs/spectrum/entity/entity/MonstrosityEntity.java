@@ -533,7 +533,7 @@ public class MonstrosityEntity extends SpectrumBossEntity implements RangedAttac
 		public void stop() {
 			LivingEntity target = MonstrosityEntity.this.getTarget();
 			if (target != null && MonstrosityEntity.this.isTarget(target, TARGET_PREDICATE)) {
-				LightShardEntity.summonBarrage(MonstrosityEntity.this.getWorld(), MonstrosityEntity.this, target, ENTITY_TARGETS);
+				LightShardEntity.summonBarrage(MonstrosityEntity.this.getWorld(), MonstrosityEntity.this, target, ENTITY_TARGETS, getEyePos(), LightShardBaseEntity.DEFAULT_COUNT_PROVIDER);
 			}
 			MonstrosityEntity.this.movementType = MovementType.START_SWOOPING;
 			super.stop();

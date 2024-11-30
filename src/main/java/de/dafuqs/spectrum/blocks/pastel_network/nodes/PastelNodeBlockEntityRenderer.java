@@ -2,6 +2,7 @@ package de.dafuqs.spectrum.blocks.pastel_network.nodes;
 
 import de.dafuqs.spectrum.*;
 import de.dafuqs.spectrum.api.pastel.*;
+import de.dafuqs.spectrum.helpers.*;
 import de.dafuqs.spectrum.registries.*;
 import net.minecraft.client.*;
 import net.minecraft.client.model.*;
@@ -13,7 +14,6 @@ import net.minecraft.item.*;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import org.jetbrains.annotations.*;
-import org.joml.*;
 
 import java.lang.Math;
 
@@ -138,14 +138,14 @@ public class PastelNodeBlockEntityRenderer implements BlockEntityRenderer<Pastel
 
 		var ringHeight = node.crystalHeight - 0.3F;
 		var innerRing = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(node.getInnerRing().map(PastelUpgradeSignature::innerRing).orElse(INNER_RING)));
-		renderRing(matrices, innerRing, 3.75F + ringHeight / 2F, 7F, node.ringAlpha, overlay, facing);
+		RenderHelper.renderFlatTransWithZYOffset(matrices, innerRing, true, 3.75F + ringHeight / 2F, 7F, node.ringAlpha, 1F, overlay);
 
 		var redstoneRing = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(node.getRedstoneRing().map(PastelUpgradeSignature::outerRing).orElse(REDSTONE_RING)));
-		renderRing(matrices, redstoneRing, 5F + ringHeight, 15F, node.ringAlpha * node.getRedstoneAlphaMult(), overlay, facing);
+		RenderHelper.renderFlatTransWithZYOffset(matrices, redstoneRing, true, 5F + ringHeight, 15F, node.ringAlpha * node.getRedstoneAlphaMult(), 1F, overlay);
 
 		if (crystal.hasOuterRing()) {
 			var outerRing = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(node.getOuterRing().map(PastelUpgradeSignature::outerRing).orElse(OUTER_RING)));
-			renderRing(matrices, outerRing, 5.75F + ringHeight * 2, 11F, node.ringAlpha, overlay, facing);
+			RenderHelper.renderFlatTransWithZYOffset(matrices, outerRing, true, 5.75F + ringHeight * 2, 11F, node.ringAlpha, 1F, overlay);
 		}
 
 		matrices.translate(0.0, node.crystalHeight + crystal.yOffset, 0.0);
@@ -158,29 +158,5 @@ public class PastelNodeBlockEntityRenderer implements BlockEntityRenderer<Pastel
 	}
 
 	private record Crystal(ItemStack crystal, double yOffset, boolean hasOuterRing) {
-	}
-
-	private void renderRing(MatrixStack matrices, VertexConsumer vertices, float height, float scale, float alpha, int overlay, Direction facing) {
-		height /= 16F;
-		var size = scale / 16F;
-		matrices.translate(-size / 2F, height, -size / 2F);
-
-		var peek = matrices.peek();
-		var model = peek.getPositionMatrix();
-		var normals = peek.getNormalMatrix();
-		var transform = normals.transform(new Vector3f(facing.getUnitVector()));
-
-		renderSide(model, normals, vertices, alpha, scale, scale, 0, size, 0, size, transform.x, transform.y, transform.z, overlay);
-		matrices.translate(size / 2F, -height, size / 2F);
-	}
-
-	private void renderSide(Matrix4f model, Matrix3f normals, VertexConsumer vertices, float alpha, float u, float v, float x1, float x2, float z1, float z2, float n1, float n2, float n3, int overlay) {
-		float u1 = 1 / 16F, v1 = 1 / 16F;
-		float u2 = u1 + u / 16F, v2 = v1 + v / 16F;
-
-		vertices.vertex(model, x1, 0, z1).color(1F, 1F, 1F, alpha).texture(u1, v1).overlay(overlay).light(LightmapTextureManager.MAX_LIGHT_COORDINATE).normal(0, 1, 0).next();
-		vertices.vertex(model, x2, 0, z1).color(1F, 1F, 1F, alpha).texture(u2, v1).overlay(overlay).light(LightmapTextureManager.MAX_LIGHT_COORDINATE).normal(0, 1, 0).next();
-		vertices.vertex(model, x2, 0, z2).color(1F, 1F, 1F, alpha).texture(u2, v2).overlay(overlay).light(LightmapTextureManager.MAX_LIGHT_COORDINATE).normal(0, 1, 0).next();
-		vertices.vertex(model, x1, 0, z2).color(1F, 1F, 1F, alpha).texture(u1, v2).overlay(overlay).light(LightmapTextureManager.MAX_LIGHT_COORDINATE).normal(0, 1, 0).next();
 	}
 }

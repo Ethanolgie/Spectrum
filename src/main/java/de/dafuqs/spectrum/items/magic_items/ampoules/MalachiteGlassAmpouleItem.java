@@ -10,6 +10,7 @@ import net.minecraft.entity.player.*;
 import net.minecraft.item.*;
 import net.minecraft.text.*;
 import net.minecraft.util.*;
+import net.minecraft.util.math.*;
 import net.minecraft.world.*;
 import org.jetbrains.annotations.*;
 
@@ -22,7 +23,7 @@ public class MalachiteGlassAmpouleItem extends BaseGlassAmpouleItem implements I
     }
     
     @Override
-    public boolean trigger(ItemStack stack, LivingEntity attacker, @Nullable LivingEntity target) {
+	public boolean trigger(ItemStack stack, LivingEntity attacker, @Nullable LivingEntity target, Vec3d position) {
         List<StatusEffectInstance> e = new ArrayList<>();
         if (attacker instanceof PlayerEntity player) {
 			List<InkPoweredStatusEffectInstance> effects = InkPoweredPotionFillable.getEffects(stack);
@@ -32,7 +33,7 @@ public class MalachiteGlassAmpouleItem extends BaseGlassAmpouleItem implements I
                 }
             }
         }
-		LightMineEntity.summonBarrage(attacker.getWorld(), attacker, target, LightShardBaseEntity.MONSTER_TARGET, e);
+		LightMineEntity.summonBarrage(attacker.getWorld(), attacker, target, LightShardBaseEntity.MONSTER_TARGET, e, position, LightShardBaseEntity.DEFAULT_COUNT_PROVIDER);
         return true;
     }
     

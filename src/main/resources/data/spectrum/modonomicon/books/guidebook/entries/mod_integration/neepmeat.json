@@ -29,19 +29,7 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "title": "container.spectrum.rei.anvil_crushing.title",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:collect_pigment"
-      },
-      "item": {
-        "item": "spectrum:magenta_leaves"
-      },
-      "text": "book.spectrum.guidebook.mod_integration.neepmeat.leaf_crushing.text"
-    },
-    {
-      "type": "modonomicon:spotlight",
-      "title": "container.spectrum.rei.advanced_crushing.title",
+			"title": "category.neepmeat.grinding",
       "condition": {
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:collect_amaranth"
@@ -52,76 +40,43 @@
       "text": "book.spectrum.guidebook.mod_integration.neepmeat.amaranth_crushing.text"
     },
     {
-      "type": "modonomicon:spotlight",
-      "title": "container.spectrum.neepmeat.grinding.title",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:collect_any_basic_shard"
-      },
-      "item": {
-        "item": "spectrum:frostbite_crystal"
-      },
-      "text": "book.spectrum.guidebook.mod_integration.neepmeat.frostbite_crystal_grinding.text"
+			"type": "spectrum:collection",
+			"title": "category.neepmeat.grinding",
+			"items": [
+				"minecraft:amethyst_shard",
+				"spectrum:quitoxic_reeds",
+				"spectrum:frostbite_crystal",
+				"spectrum:blazing_crystal"
+			],
+			"text": "book.spectrum.guidebook.mod_integration.neepmeat.grinding.text"
     },
+		{
+			"type": "modonomicon:spotlight",
+			"title": "category.neepmeat.advanced_crushing",
+			"condition": {
+				"type": "modonomicon:advancement",
+				"advancement_id": "spectrum:collect_pigment"
+			},
+			"item": {
+				"item": "spectrum:magenta_leaves"
+			},
+			"text": "book.spectrum.guidebook.mod_integration.neepmeat.leaf_crushing.text"
+		},
     {
-      "type": "modonomicon:spotlight",
-      "title": "container.spectrum.neepmeat.grinding.title",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:collect_any_basic_shard"
-      },
-      "item": {
-        "item": "spectrum:blazing_crystal"
-      },
-      "text": "book.spectrum.guidebook.mod_integration.neepmeat.blazing_crystal_grinding.text"
-    },
-    {
-      "type": "modonomicon:spotlight",
-      "title": "container.spectrum.neepmeat.grinding.title",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:collect_any_basic_shard"
-      },
-      "item": {
-        "item": "minecraft:amethyst_shard"
-      },
-      "text": "book.spectrum.guidebook.mod_integration.neepmeat.gemstone_grinding.text"
-    },
-    {
-      "type": "modonomicon:spotlight",
-      "title": "container.spectrum.neepmeat.grinding.title",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:collect_any_basic_shard"
-      },
-      "item": {
-        "item": "spectrum:quitoxic_reeds"
-      },
-      "text": "book.spectrum.guidebook.mod_integration.neepmeat.quitoxic_reeds_grinding.text"
-    },
-    {
-      "type": "modonomicon:spotlight",
-      "title": "container.spectrum.neepmeat.enlightening.title",
+			"type": "spectrum:collection",
+			"title": "category.neepmeat.enlightening",
       "condition": {
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:midgame/collect_mob_head_using_treasure_hunter"
       },
-      "item": {
-        "item": "spectrum:elder_guardian_head"
-      },
-      "text": "book.spectrum.guidebook.mod_integration.neepmeat.elder_guardian_memory.text"
-    },
-    {
-      "type": "modonomicon:spotlight",
-      "title": "container.spectrum.neepmeat.enlightening.title",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:midgame/collect_mob_head_using_treasure_hunter"
-      },
-      "item": {
-        "item": "spectrum:endermite_head"
-      },
-      "text": "book.spectrum.guidebook.mod_integration.neepmeat.endermite_memory.text"
+			"items": [
+				"spectrum:guardian_head",
+				"spectrum:elder_guardian_head",
+				"minecraft:air",
+				"spectrum:silverfish_head",
+				"spectrum:endermite_head"
+			],
+			"text": "book.spectrum.guidebook.mod_integration.neepmeat.enlightening.text"
     },
     {
       "type": "spectrum:anvil_crushing",
@@ -141,6 +96,7 @@
     },
     {
       "type": "spectrum:potion_workshop_brewing",
+			"title": "effect.neepmeat.ash_preparation",
       "recipe_id": "spectrum:mod_integration/neepmeat/potion_workshop_brewing/neepmeat_ash_preparation"
     },
     {

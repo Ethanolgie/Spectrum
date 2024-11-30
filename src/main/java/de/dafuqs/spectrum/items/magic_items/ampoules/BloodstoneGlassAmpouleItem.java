@@ -10,6 +10,7 @@ import net.minecraft.entity.attribute.*;
 import net.minecraft.item.*;
 import net.minecraft.text.*;
 import net.minecraft.util.*;
+import net.minecraft.util.math.*;
 import net.minecraft.world.*;
 import org.jetbrains.annotations.*;
 
@@ -37,13 +38,13 @@ public class BloodstoneGlassAmpouleItem extends BaseGlassAmpouleItem implements 
 	}
 	
 	@Override
-	public boolean trigger(ItemStack stack, LivingEntity attacker, @Nullable LivingEntity target) {
+	public boolean trigger(ItemStack stack, LivingEntity attacker, @Nullable LivingEntity target, Vec3d position) {
 		World world = attacker.getWorld();
 		if (target == null) {
 			return false;
 		}
 		if (!world.isClient) {
-			LightSpearEntity.summonBarrage(attacker.getWorld(), attacker, target, LightShardBaseEntity.MONSTER_TARGET);
+			LightSpearEntity.summonBarrage(attacker.getWorld(), attacker, target, LightShardBaseEntity.MONSTER_TARGET, position, LightShardBaseEntity.DEFAULT_COUNT_PROVIDER);
 		}
 		return true;
 	}

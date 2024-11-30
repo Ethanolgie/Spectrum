@@ -23,6 +23,7 @@ import java.util.*;
 
 public class SpectrumLootPoolModifiers {
 	
+	// TODO: Make data driven / introduce a constant for the 0.02 drops
 	private static final Map<Identifier, TreasureHunterDropDefinition> treasureHunterLootPools = new HashMap<>() {{
 		// Additional vanilla head drops
 		put(new Identifier("entities/creeper"), new TreasureHunterDropDefinition(Items.CREEPER_HEAD, 0.02F));
